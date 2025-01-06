@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Header Menu</title>
+  <title>Training Courses | Elevate Mind Mastery</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +20,12 @@
         </button>
       </div>
     </div>
-    <nav class="menu">
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="menu" id="menu">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#training-courses">Training Courses</a></li>
@@ -45,6 +50,14 @@
       <a href="#join" class="hero-button">Join the journey →</a>
     </div>
   </section>
-  
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+    
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
