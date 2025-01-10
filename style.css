@@ -137,6 +137,38 @@ body {
   color: #6c0e10;
 }
 
+.certifications {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  color: #6c0e10; /* Cor do título */
+}
+
+.certifications h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.certification-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza as imagens horizontalmente */
+  gap: 20px; /* Espaçamento entre as imagens */
+}
+
+.certification-logos img {
+  max-width: 150px; /* Define um tamanho máximo para as imagens */
+  height: auto; /* Mantém a proporção das imagens */
+  border-radius: 5px; /* Borda arredondada */
+  transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.certification-logos img:hover {
+  transform: scale(1.1); /* Amplia levemente ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao passar o mouse */
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   /* Header layout em telas pequenas */
@@ -211,7 +243,6 @@ body {
       margin-top: 20px;
       width: 100%;
   }
-
   .social-icons a {
       padding: 0 10px;
   }
@@ -233,4 +264,6 @@ body {
   .hero-button {
       padding: 10px 25px;
   }
+
+  
 }
