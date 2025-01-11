@@ -214,6 +214,115 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.testimonials {
+  background-color: #6c0e10;
+  color: #fff;
+  text-align: center;
+  padding: 20px 20px; /* Reduzi o padding geral */
+}
+
+.testimonials h1 {
+  font-size: 24px;
+  margin-bottom: 5px; /* Menor espaço entre o título e o subtítulo */
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 2px;
+  
+}
+
+.testimonials h2 {
+  font-size: 20px;
+  text-align: left;
+  font-weight: lighter;
+  margin-bottom: 20px; /* Menor espaço após o subtítulo */
+
+}
+
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 80%;
+  scroll-behavior: smooth;
+}
+
+.testimonial-card {
+  flex: 0 0 33.33%; /* 3 cards visíveis por vez */
+  max-width: 33.33%;
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  margin: 0 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.testimonial-card img {
+  max-width: 50px;
+  margin-bottom: 10px;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.author img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.author span {
+  font-size: 14px;
+}
+
+.author small {
+  color: #666;
+  font-size: 12px;
+}
+
+button.prev, button.next {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button.prev {
+  left: 5%;
+}
+
+button.next {
+  right: 5%;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #6c0e10;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   /* Header layout em telas pequenas */
@@ -313,7 +422,13 @@ body {
   .courses-grid {
     grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
   }
-  
+
+  @media (max-width: 768px) {
+    .testimonial-card {
+      flex: 0 0 100%; /* Apenas 1 card visível */
+      max-width: 100%;
+    }
+  }
 }
 
 @media (max-width: 480px) {
