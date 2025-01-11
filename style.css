@@ -166,6 +166,7 @@ body {
   transform: scale(1.1); /* Amplia levemente ao passar o mouse */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao passar o mouse */
 }
+
 .training-courses {
   padding: 20px;
   background-color: #fff;
@@ -227,7 +228,6 @@ body {
   text-transform: uppercase;
   text-align: left;
   letter-spacing: 2px;
-  
 }
 
 .testimonials h2 {
@@ -235,7 +235,6 @@ body {
   text-align: left;
   font-weight: lighter;
   margin-bottom: 20px; /* Menor espaço após o subtítulo */
-
 }
 
 .carousel {
@@ -325,114 +324,102 @@ button:hover {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  /* Header layout em telas pequenas */
   .header {
-      flex-direction: column;
-      align-items: center; /* Centraliza os itens no header */
-      justify-content: center; /* Garante o alinhamento do logo e hambúrguer */
-  }
-
-  .logo {
-      margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .logo img {
-      height: 40px;
+    height: 40px;
   }
 
   .search-section {
-      display: none; /* Esconde a barra de pesquisa */
+    display: none;
   }
 
-  /* Menu no mobile */
   .menu {
-      display: none;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      background-color: #ffffff;
-      width: 100%;
-      text-align: center;
-      padding: 20px 0;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
   }
 
-  /* Quando o menu for ativado */
   .menu.active {
-      display: block;
+    display: block;
   }
 
-  /* Menu Hamburguer */
   .menu-toggle {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      justify-content: center; /* Centraliza o botão hambúrguer */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    justify-content: center;
   }
 
   .menu-toggle span {
-      width: 25px;
-      height: 3px;
-      background-color: #620007; /* Cor do menu hambúrguer */
-      transition: all 0.3s ease-in-out;
+    width: 25px;
+    height: 3px;
+    background-color: #620007;
+    transition: all 0.3s ease-in-out;
   }
 
   .menu ul {
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      text-align: center;
-      padding-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
   }
 
   .menu ul li a {
-      font-size: 18px;
-      padding: 10px 0;
+    font-size: 18px;
+    padding: 10px 0;
   }
 
-  /* Social icons */
   .social-icons {
-      justify-content: center;
-      margin-top: 20px;
-      width: 100%;
-  }
-  .social-icons a {
-      padding: 0 10px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
   }
 
-  /* Hero section ajustada para telas pequenas */
+  .social-icons a {
+    padding: 0 10px;
+  }
+
   .hero-section {
-      padding: 30px 20px;
-      height: 80vh;
+    padding: 30px 20px;
+    height: 80vh;
   }
 
   .hero-content h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .hero-content p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .hero-button {
-      padding: 10px 25px;
+    padding: 10px 25px;
   }
 
   .courses-grid {
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 768px) {
-    .testimonial-card {
-      flex: 0 0 100%; /* Apenas 1 card visível */
-      max-width: 100%;
-    }
+  .testimonial-card {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .courses-grid {
-    grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    grid-template-columns: 1fr;
   }
 }
