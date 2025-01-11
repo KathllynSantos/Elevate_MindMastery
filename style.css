@@ -238,7 +238,6 @@ body {
 
 }
 
-
 .carousel {
   display: flex;
   align-items: center;
@@ -266,8 +265,9 @@ body {
 }
 
 .testimonial-card img {
-  max-width: 50px;
+  max-width: 30px;
   margin-bottom: 10px;
+  margin-left: 120px;
 }
 
 .testimonial-card p {
@@ -283,9 +283,9 @@ body {
 
 .author img {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
 }
 
 .author span {
