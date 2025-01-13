@@ -94,7 +94,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 50px 20px;
-  background-image: url('src/img/banner.jpg');
+  background-image: url('/src/img/banner.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -166,7 +166,6 @@ body {
   transform: scale(1.1); /* Amplia levemente ao passar o mouse */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao passar o mouse */
 }
-
 .training-courses {
   padding: 20px;
   background-color: #fff;
@@ -228,6 +227,7 @@ body {
   text-transform: uppercase;
   text-align: left;
   letter-spacing: 2px;
+  
 }
 
 .testimonials h2 {
@@ -235,6 +235,7 @@ body {
   text-align: left;
   font-weight: lighter;
   margin-bottom: 20px; /* Menor espaço após o subtítulo */
+
 }
 
 .carousel {
@@ -248,11 +249,11 @@ body {
   display: flex;
   overflow: hidden;
   width: 80%;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Transição suave no scroll */
 }
 
 .testimonial-card {
-  flex: 0 0 33.33%; /* 3 cards visíveis por vez */
+  flex: 0 0 27.27%; /* Ajuste para 3 cards visíveis */
   max-width: 33.33%;
   background-color: #fff;
   color: #333;
@@ -261,7 +262,9 @@ body {
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
 }
+
 
 .testimonial-card img {
   max-width: 30px;
@@ -282,9 +285,9 @@ body {
 
 .author img {
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  margin-left: 80px;
 }
 
 .author span {
@@ -321,105 +324,233 @@ button:hover {
   background-color: #fff;
   color: #6c0e10;
 }
+.hero-section-01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/src/img/banner\ 1.jpg'); /* Substitua pelo caminho da imagem */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #6c0e10; /* Cor elegante */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section-01::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4); /* Efeito de sobreposição transparente */
+  z-index: 1;
+}
+
+.hero-content-01 {
+  position: relative;
+  z-index: 2; /* Garantir que o texto fique acima da camada de sobreposição */
+}
+
+.hero-content-01 h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-content-01 p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-bottom: 30px;
+}
+
+.hero-button-01 {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #6c0e10;
+  text-decoration: none;
+  border: 2px solid #6c0e10;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-button-01:hover {
+  background-color: #6c0e10;
+  color: #fff;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #fff;
+  color: #6c0e10;
+  padding: 0 0 0 10px;
+  border-top: 5px solid #6c0e10;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-logo {
+  max-width: 150px; /* Ajuste o tamanho máximo do logotipo */
+  height: auto; /* Mantém a proporção */
+  margin-bottom: 10px; /* Espaçamento abaixo do logotipo */
+}
+
+.social-icons a {
+  color: #6c0e10;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #333;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links ul li {
+  margin: 10px 0;
+}
+
+.quick-links ul li a {
+  color: #6c0e10;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.quick-links ul li a:hover {
+  color: #333;
+}
+
+.contact-us p {
+  margin: 10px 0;
+}
+
+.footer-bottom {
+  text-align: left;
+  padding: 10px;
+  background-color: #6c0e10;
+  color: #fff;
+  margin-top: 10px;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
+  /* Header layout em telas pequenas */
   .header {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center; /* Centraliza os itens no header */
+      justify-content: center; /* Garante o alinhamento do logo e hambúrguer */
+  }
+
+  .logo {
+      margin-bottom: 20px;
   }
 
   .logo img {
-    height: 40px;
+      height: 40px;
   }
 
   .search-section {
-    display: none;
+      display: none; /* Esconde a barra de pesquisa */
   }
 
+  /* Menu no mobile */
   .menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #ffffff;
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
   }
 
+  /* Quando o menu for ativado */
   .menu.active {
-    display: block;
+      display: block;
   }
 
+  /* Menu Hamburguer */
   .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    justify-content: center;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      justify-content: center; /* Centraliza o botão hambúrguer */
   }
 
   .menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: #620007;
-    transition: all 0.3s ease-in-out;
+      width: 25px;
+      height: 3px;
+      background-color: #620007; /* Cor do menu hambúrguer */
+      transition: all 0.3s ease-in-out;
   }
 
   .menu ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    text-align: center;
-    padding-top: 10px;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      text-align: center;
+      padding-top: 10px;
   }
 
   .menu ul li a {
-    font-size: 18px;
-    padding: 10px 0;
+      font-size: 18px;
+      padding: 10px 0;
   }
 
+  /* Social icons */
   .social-icons {
-    justify-content: center;
-    margin-top: 20px;
-    width: 100%;
+      justify-content: center;
+      margin-top: 20px;
+      width: 100%;
   }
-
   .social-icons a {
-    padding: 0 10px;
+      padding: 0 10px;
   }
 
+  /* Hero section ajustada para telas pequenas */
   .hero-section {
-    padding: 30px 20px;
-    height: 80vh;
+      padding: 30px 20px;
+      height: 80vh;
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+      font-size: 2rem;
   }
 
   .hero-content p {
-    font-size: 1rem;
+      font-size: 1rem;
   }
 
   .hero-button {
-    padding: 10px 25px;
+      padding: 10px 25px;
   }
 
   .courses-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .testimonial-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .courses-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
   }
 }
