@@ -455,6 +455,50 @@ button:hover {
 
 
 /* Responsividade */
+@media (min-width: 1200px) {
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.25rem;
+  }
+
+  .hero-button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(5, 1fr); /* Cinco colunas em telas maiores */
+  }
+
+  .testimonial-card {
+    flex: 0 0 20%; /* Ajuste para exibir mais cards em telas maiores */
+  }
+
+    .footer-container {
+      max-width: 1400px; /* Expande o layout em telas maiores */
+    }
+  
+    .footer-section {
+      flex: 0 0 20%; /* Reduz a largura de cada seção */
+      margin: 0 10px; /* Ajusta o espaçamento lateral */
+    }
+  
+    .footer-logo {
+      max-width: 200px; /* Aumenta o tamanho do logotipo */
+    }
+  
+    .social-icons a {
+      font-size: 2rem; /* Aumenta os ícones sociais */
+    }
+  
+    .footer-bottom {
+      padding: 20px; /* Aumenta o espaçamento no rodapé */
+    }
+  }
+
 @media (max-width: 768px) {
   /* Header layout em telas pequenas */
   .header {
@@ -552,5 +596,33 @@ button:hover {
 
   .courses-grid {
     grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Alinha as seções verticalmente */
+      align-items: center; /* Centraliza os itens */
+    }
+  
+    .footer-section {
+      margin: 20px 0; /* Espaçamento entre as seções */
+      text-align: center; /* Centraliza o texto */
+    }
+  
+    .social-icons {
+      justify-content: center; /* Centraliza os ícones sociais */
+      margin-top: 10px;
+    }
+  
+    .footer-bottom {
+      text-align: center; /* Centraliza o texto no rodapé */
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar input {
+    width: 100%; /* Usa toda a largura disponível */
+    font-size: 14px; /* Reduz o tamanho da fonte */
   }
 }
