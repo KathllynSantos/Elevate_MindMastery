@@ -263,22 +263,22 @@ body {
   background-color: #620007;
   color: #fff;
   text-align: center;
-  padding: 60px 20px; /* Reduzi o padding geral para melhor ajuste em telas pequenas */
+  padding: 80px 50px; /* Reduzi o padding geral */
 }
 
 .testimonials h1 {
-  font-size: 2rem;
-  margin-bottom: 10px; /* Espaçamento equilibrado */
+  font-size: 24px;
+  margin-bottom: 5px; /* Menor espaço entre o título e o subtítulo */
   text-transform: uppercase;
-  text-align: center; /* Alinhei ao centro para maior uniformidade */
+  text-align: left;
   letter-spacing: 2px;
 }
 
 .testimonials h2 {
-  font-size: 1.5rem;
-  text-align: center;
+  font-size: 20px;
+  text-align: left;
   font-weight: lighter;
-  margin-bottom: 40px; /* Menor espaço para uma transição mais suave */
+  margin-bottom: 50px; /* Menor espaço após o subtítulo */
 }
 
 .carousel {
@@ -291,13 +291,13 @@ body {
 .carousel-container {
   display: flex;
   overflow: hidden;
-  width: 90%; /* Ajustei a largura para ocupar mais espaço */
+  width: 80%;
   scroll-behavior: smooth;
 }
 
 .testimonial-card {
-  flex: 0 0 90%; /* Mostra um card por vez em telas pequenas */
-  max-width: 33.33%; /* Mostra 3 cards em telas maiores */
+  flex: 0 0 27.27%; /* Ajuste para 3 cards visíveis */
+  max-width: 33.33%;
   background-color: #fff;
   color: #333;
   border-radius: 25px;
@@ -305,55 +305,50 @@ body {
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
 }
 
 .testimonial-card img {
-  max-width: 40px;
-  margin: 0 auto 10px;
-  display: block; /* Centraliza a imagem no card */
+  max-width: 30px;
+  margin-bottom: 10px;
+  margin-left: 120px;
 }
 
 .testimonial-card p {
-  font-size: 1rem;
+  font-size: 14px;
   line-height: 1.5;
 }
 
 .author {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 15px;
+  gap: 15px; /* Cria espaço proporcional entre os elementos */
+  margin-top: 10px;
 }
 
 .author img {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60px; /* Tamanho mais razoável para uma imagem de perfil */
+  height: 30px; /* Garante que a imagem seja sempre quadrada */
+  margin-left: 0; /* Remove margens laterais desnecessárias */
 }
 
 .author span {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: bold; /* Dá destaque ao nome do autor */
 }
 
 .author small {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 12px;
 }
-
 button-1.prev,
 button-1.next {
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   color: #fff;
-  padding: 10px;
-  font-size: 1.5rem;
+  padding: 10px 20px;
+  font-size: 20px;
   cursor: pointer;
   border-radius: 50%;
   position: absolute;
@@ -370,7 +365,7 @@ button-1.next {
 }
 
 button-1:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #ffffff4f;
 }
 
 .hero-section-01 {
@@ -650,26 +645,6 @@ button-1:hover {
   font-size: 1rem; /* Reduz o tamanho do botão */
   padding: 8px 16px;
 }
-.testimonial-card {
-  flex: 0 0 80%; /* Exibe um card de cada vez */
-  max-width: 80%;
-  margin: 0 auto 20px; /* Centraliza e adiciona espaçamento */
-}
-
-button-1.prev,
-button-1.next {
-  font-size: 1.2rem;
-  padding: 8px;
-}
-
-.testimonials h1 {
-  font-size: 1.8rem;
-}
-
-.testimonials h2 {
-  font-size: 1.2rem;
-}
-
 
 @media (max-width: 480px) {
   .footer-section {
@@ -750,5 +725,4 @@ button-1.next {
     font-size: 1rem;
     padding: 6px;
   }
-
 }
