@@ -296,7 +296,7 @@ body {
 }
 
 .testimonial-card {
-  flex: 0 0 27.27%; /* Ajuste para 3 cards visíveis */
+  flex: 0 0 25.27%; /* Ajuste para 3 cards visíveis */
   max-width: 33.33%;
   background-color: #fff;
   color: #333;
@@ -311,7 +311,7 @@ body {
 .testimonial-card img {
   max-width: 30px;
   margin-bottom: 10px;
-  margin-left: 120px;
+  margin-left: 80px;
 }
 
 .testimonial-card p {
@@ -614,36 +614,34 @@ button-1:hover {
     padding: 10px;
     font-size: 18px;
   }
-}
 
-.footer-container {
-  flex-direction: column; /* Coloca as seções uma abaixo da outra */
-  align-items: center;
-}
+  .hero-content-01 h1 {
+    font-size: 2.5rem; /* Reduz o tamanho do título */
+  }
 
-.footer-section {
-  text-align: center; /* Centraliza o texto em telas menores */
-}
+  .hero-content-01 p {
+    font-size: 1.2rem; /* Ajusta o tamanho do parágrafo */
+  }
 
-.social-icons {
-  justify-content: center; /* Centraliza os ícones sociais */
-}
+  .hero-button-01 {
+    font-size: 1rem; /* Reduz o tamanho do botão */
+    padding: 8px 16px;
+  }
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr); /* Reduz para duas colunas */
+  }
 
-.footer-logo {
-  margin: 0 auto 20px; /* Centraliza o logo e adiciona espaçamento inferior */
-}
+  .hero-content h1 {
+    font-size: 2.5rem; /* Reduz tamanho do título */
+  }
 
-.hero-content-01 h1 {
-  font-size: 2.5rem; /* Reduz o tamanho do título */
-}
+  .hero-content p {
+    font-size: 0.9rem; /* Reduz tamanho do texto */
+  }
 
-.hero-content-01 p {
-  font-size: 1.2rem; /* Ajusta o tamanho do parágrafo */
-}
-
-.hero-button-01 {
-  font-size: 1rem; /* Reduz o tamanho do botão */
-  padding: 8px 16px;
+  .hero-section {
+    padding: 30px 10px; /* Ajusta o espaçamento interno */
+  }
 }
 
 @media (max-width: 480px) {
@@ -708,8 +706,34 @@ button-1:hover {
     padding: 20px; /* Adiciona espaço interno em dispositivos menores */
   }
   .testimonial-card {
-    flex: 0 0 100%; /* Ocupa toda a largura em telas menores */
-    max-width: 100%;
+    flex: 0 0 80%; /* Ocupa toda a largura em telas menores */
+    max-width: 80%;
+  }
+
+  .testimonial-card img {
+    max-width: 30px;
+    margin-bottom: 10px;
+    margin-left: 0; /* Remove o deslocamento à esquerda */
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+  }
+
+  .author img {
+    width: 35px; /* Reduz o tamanho da imagem */
+    height: 40px; /* Mantém o formato circular */
+    margin-left: 0; /* Garante alinhamento correto */
+    object-fit: cover; /* Ajusta proporcionalmente o conteúdo da imagem */
+  }
+
+  .author span {
+    font-size: 12px; /* Reduz o tamanho do texto para caber melhor */
+    font-weight: bold; /* Mantém o destaque no nome do autor */
+    margin-right: 110px;
+  }
+
+  .author small {
+    font-size: 10px; /* Reduz o tamanho do texto para se ajustar à tela */
+    color: #888; /* Cor ligeiramente mais clara para harmonia visual */
   }
 
   .testimonials h1 {
@@ -722,7 +746,12 @@ button-1:hover {
 
   button-1.prev,
   button-1.next {
-    font-size: 1rem;
-    padding: 6px;
+    font-size: 0.7rem;
+    padding: 12px;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr; /* Apenas uma coluna */
   }
 }
+
