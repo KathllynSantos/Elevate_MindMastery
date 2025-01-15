@@ -459,22 +459,28 @@ button-1:hover {
   height: auto;
   margin-bottom: 10px;
 }
-
-.social-icons {
+.social-icn {
   display: flex;
-  gap: 10px;
+  justify-content: left; /* Centraliza os ícones */
+  gap: 10px; /* Espaçamento entre os ícones */
   margin-top: 10px;
 }
 
-.social-icons a {
-  color: #620007;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: color 0.3s;
+.social-icn a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
 }
 
-.social-icons a:hover {
-  color: #333;
+.social-icn img {
+  width: 40%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icn img:hover {
+  transform: scale(1.1); /* Aumenta ligeiramente o ícone ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Adiciona sombra */
 }
 
 .quick-links ul {
@@ -646,13 +652,8 @@ button-1:hover {
 
 @media (max-width: 480px) {
   .footer-section {
-    padding: 10px; /* Reduz o espaçamento interno para telas muito pequenas */
-  }
-
-  .social-icons a {
-    font-size: 1.2rem; /* Diminui o tamanho dos ícones sociais */
-  }
-
+    padding: 10px;
+     /* Reduz o espaçamento interno para telas muito pequenas */
   /* Header layout em telas pequenas */
   .header {
     flex-direction: column;
@@ -754,4 +755,4 @@ button-1:hover {
     grid-template-columns: 1fr; /* Apenas uma coluna */
   }
 }
-
+}
