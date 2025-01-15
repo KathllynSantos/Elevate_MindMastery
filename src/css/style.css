@@ -653,7 +653,7 @@ button-1:hover {
 @media (max-width: 480px) {
   .footer-section {
     padding: 10px;
-     /* Reduz o espaçamento interno para telas muito pequenas */
+  }
   /* Header layout em telas pequenas */
   .header {
     flex-direction: column;
@@ -754,5 +754,4 @@ button-1:hover {
   .courses-grid {
     grid-template-columns: 1fr; /* Apenas uma coluna */
   }
-}
 }
