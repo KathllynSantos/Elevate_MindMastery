@@ -3,91 +3,6 @@ body {
   margin: 0;
   font-family: "Runalto", sans-serif;
 }
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ccc;
-}
-
-.logo img {
-  height: 50px;
-  margin-left: 20px;
-}
-
-.search-section {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.explore-text {
-  font-size: 16px;
-  font-weight: lighter;
-  color: #333;
-}
-
-.search-bar {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.search-bar input {
-  padding: 5px 10px;
-  padding-right: 40px;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  width: 200px;
-}
-
-.search-bar button {
-  position: absolute;
-  right: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.search-bar button img {
-  height: 18px;
-}
-
-.menu ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 20px;
-}
-
-.menu ul li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-}
-
-.menu ul li a:hover {
-  color: #a81015;
-}
-
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.social-icons a img {
-  height: 20px;
-}
-
-.social-icons a:hover img {
-  filter: brightness(0.7);
-}
-
 .hero-section {
   display: flex;
   justify-content: center;
@@ -95,12 +10,18 @@ body {
   text-align: center;
   padding: 50px 20px;
   background-image: url("/src/img/banner.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover; /* Ajusta a imagem de fundo para cobrir toda a área */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-repeat: no-repeat; /* Garante que a imagem não se repita */
+  background-attachment: fixed; /* Fixa a imagem de fundo ao rolar a página */
   color: #ffffff;
-  height: 100vh;
+  height: 100vh; /* Altura da seção ocupa toda a altura da janela */
+  line-height: 1.5em;
+  padding-bottom: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
+
 
 .hero-content {
   max-width: 800px;
@@ -132,89 +53,14 @@ body {
 
 .hero-button:hover {
   background-color: #fff;
-  color: #620007;
+  color: #9f0726;
 }
 
-.certifications {
-  text-align: center;
-  padding: 20px;
-  background-color: #fff;
-  color: #620007; /* Cor do título */
-}
-
-.certifications h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-.carousel-container-certifications {
-  position: relative;
-  max-width: 100%;
-  margin: 0 auto;
-  overflow: hidden; /* Oculta as imagens que saem dos limites */
-}
-
-.carousel {
-  display: flex;
-  gap: 20px; /* Espaçamento entre os elementos no carrossel */
-  padding: 10px;
-  scroll-behavior: smooth; /* Rolagem suave */
-}
-
-.carousel::-webkit-scrollbar {
-  display: none; /* Esconde a barra de rolagem */
-}
-
-.certification-logos {
-  display: flex;
-  gap: 20px;
-}
-
-.certification-logos img {
-  max-width: 190px; /* Define um tamanho máximo para as imagens */
-  height: auto; /* Mantém a proporção das imagens */
-  border-radius: 5px; /* Borda arredondada */
-  transition: transform 0.3s ease; /* Animação ao passar o mouse */
-}
-
-.certification-logos img:hover {
-  transform: scale(1.1); /* Amplia levemente ao passar o mouse */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao passar o mouse */
-}
-
-.carousel-certifications-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #620007;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 25px;
-  transition: background-color 0.3s ease;
-  z-index: 10;
-}
-
-.carousel-certifications-btn:hover {
-  background-color: #ffffff; /* Cor mais clara ao passar o mouse */
-  color: #620007;
-}
-
-.carousel-certifications-btn.prev {
-  left: 10px; /* Posição do botão anterior */
-}
-
-.carousel-certifications-btn.next {
-  right: 10px; /* Posição do botão próximo */
-}
 
 .training-courses {
   padding: 20px;
   background-color: #fff;
-  color: #620007; /* Cor do título */
+  color: #9f0726; /* Cor do título */
 }
 
 .training-courses h1 {
@@ -225,7 +71,6 @@ body {
   margin-right: 20px; /* Espaço entre o título e o grid */
   padding-left: 20px;
 }
-
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Quatro colunas */
@@ -260,7 +105,7 @@ body {
 }
 
 .testimonials {
-  background-color: #620007;
+  background-color: #9f0726;
   color: #fff;
   text-align: center;
   padding: 80px 50px; /* Reduzi o padding geral */
@@ -373,14 +218,21 @@ button-1:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url("/src/img/banner\ 1.jpg"); /* Substitua pelo caminho da imagem */
-  background-size: cover;
-  background-position: center;
+  background-image: url("/src/img/banner 1.jpg"); /* Substitua pelo caminho correto da imagem */
+  background-size: cover; /* Ajusta a imagem de fundo para cobrir toda a área */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-repeat: no-repeat; /* Garante que a imagem não se repita */
+  background-attachment: fixed; /* Fixa a imagem de fundo ao rolar a página */
   text-align: center;
-  color: #620007; /* Cor elegante */
+  color: #ffffff; /* Cor do texto */
   position: relative;
   overflow: hidden;
+  line-height: 1.5em;
+  padding-bottom: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
+
 
 .hero-section-01::before {
   content: "";
@@ -420,24 +272,96 @@ button-1:hover {
   display: inline-block;
   padding: 10px 20px;
   font-size: 1.2rem;
-  color: #620007;
+  color: #9f0726;
   text-decoration: none;
-  border: 2px solid #620007;
+  border: 2px solid #9f0726;
   border-radius: 25px;
   transition: all 0.3s ease-in-out;
 }
 
 .hero-button-01:hover {
-  background-color: #620007;
+  background-color: #9f0726;
   color: #fff;
+}
+
+
+.course-container {
+  background-image: url("/src/img/banner.jpg");
+  border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+            overflow: hidden;
+            
+  
+}
+
+.text-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.text-content h1 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.text-content h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0 0 20px;
+}
+
+.text-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+.text-content .features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.text-content .features span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.text-content .cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #d8a33a;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.image-content {
+  flex: 1;
+  background-image: url('/src/img/1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.features i {
+  font-size: 14px;
 }
 
 /* Rodapé */
 .footer {
   background-color: #fff;
-  color: #620007;
+  color: #9f0726;
   padding: 10px;
-  border-top: 5px solid #620007;
+  border-top: 5px solid #9f0726;
+  
+  font-family: "Poppins", sans-serif;
 }
 
 .footer-container {
@@ -455,7 +379,7 @@ button-1:hover {
 }
 
 .footer-logo {
-  max-width: 150px;
+  max-width: 300px;
   height: auto;
   margin-bottom: 10px;
 }
@@ -470,10 +394,12 @@ button-1:hover {
   display: inline-block;
   width: 40px;
   height: 40px;
+  
 }
 
 .social-icn img {
-  width: 40%;
+
+  width: 70%;
   height: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -493,265 +419,31 @@ button-1:hover {
 }
 
 .quick-links ul li a {
-  color: #620007;
+  color: #333;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .quick-links ul li a:hover {
-  color: #333;
+  color: #9f0726;
 }
 
 .contact-us p {
   margin: 10px 0;
+  color: #333;
 }
+
+.contact-us a {
+  color: #333; /* Cor do texto para combinar com o design */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  transition: color 0.3s ease-in-out;
+}
+
 
 .footer-bottom {
   text-align: center;
-  padding: 10px;
-  background-color: #620007;
+  padding: 2px; 
+  background-color: #450413;
   color: #fff;
   margin-top: 10px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: center; /* Centraliza os itens no header */
-    justify-content: center; /* Garante o alinhamento do logo e hambúrguer */
-  }
-
-  .logo {
-    margin-bottom: 20px;
-  }
-
-  .logo img {
-    height: 40px;
-  }
-
-  .search-section {
-    display: none; /* Esconde a barra de pesquisa */
-  }
-
-  /* Menu no mobile */
-  .menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    transition: all 0.3s ease-in-out; /* Transição suave */
-  }
-
-  /* Quando o menu for ativado */
-  .menu.active {
-    display: block;
-  }
-
-  /* Menu Hamburguer */
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    justify-content: center; /* Centraliza o botão hambúrguer */
-    transition: all 0.3s ease-in-out; /* Transição suave */
-  }
-
-  .menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: #620007; /* Cor do menu hambúrguer */
-    transition: all 0.3s ease-in-out;
-  }
-
-  .menu ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    text-align: center;
-    padding-top: 10px;
-  }
-
-  .menu ul li a {
-    font-size: 18px;
-    padding: 10px 0;
-  }
-
-  /* Social icons */
-  .social-icons {
-    justify-content: center;
-    margin-top: 20px;
-    width: 100%;
-  }
-  .social-icons a {
-    padding: 0 10px;
-  }
-
-  /* Hero section ajustada para telas pequenas */
-  .hero-section {
-    padding: 30px 20px;
-    height: 80vh;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .hero-button {
-    padding: 10px 25px;
-  }
-
-  .courses-grid {
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
-  }
-
-  /* Ajustes adicionais para botões de navegação do carrossel */
-  .carousel button {
-    padding: 10px;
-    font-size: 18px;
-  }
-
-  .hero-content-01 h1 {
-    font-size: 2.5rem; /* Reduz o tamanho do título */
-  }
-
-  .hero-content-01 p {
-    font-size: 1.2rem; /* Ajusta o tamanho do parágrafo */
-  }
-
-  .hero-button-01 {
-    font-size: 1rem; /* Reduz o tamanho do botão */
-    padding: 8px 16px;
-  }
-  .courses-grid {
-    grid-template-columns: repeat(2, 1fr); /* Reduz para duas colunas */
-  }
-
-  .hero-content h1 {
-    font-size: 2.5rem; /* Reduz tamanho do título */
-  }
-
-  .hero-content p {
-    font-size: 0.9rem; /* Reduz tamanho do texto */
-  }
-
-  .hero-section {
-    padding: 30px 10px; /* Ajusta o espaçamento interno */
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-section {
-    padding: 10px;
-  }
-  /* Header layout em telas pequenas */
-  .header {
-    flex-direction: column;
-    align-items: center; /* Centraliza os itens no header */
-    justify-content: center; /* Garante o alinhamento do logo e hambúrguer */
-  }
-
-  .logo {
-    margin-bottom: 20px;
-  }
-
-  .logo img {
-    height: 40px;
-  }
-
-  .search-section {
-    display: none; /* Esconde a barra de pesquisa */
-  }
-
-  /* Menu no mobile */
-  .menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-  }
-  /* Quando o menu for ativado */
-  .menu.active {
-    display: block;
-  }
-  .hero-content-01 h1 {
-    font-size: 2rem; /* Reduz ainda mais o título */
-  }
-
-  .hero-content-01 p {
-    font-size: 1rem; /* Ajusta o parágrafo para telas menores */
-  }
-
-  .hero-button-01 {
-    font-size: 0.9rem; /* Ajusta o tamanho do botão */
-    padding: 6px 12px;
-  }
-
-  .hero-section-01 {
-    height: auto; /* Permite que a seção se ajuste ao conteúdo */
-    padding: 20px; /* Adiciona espaço interno em dispositivos menores */
-  }
-  .testimonial-card {
-    flex: 0 0 80%; /* Ocupa toda a largura em telas menores */
-    max-width: 80%;
-  }
-
-  .testimonial-card img {
-    max-width: 30px;
-    margin-bottom: 10px;
-    margin-left: 0; /* Remove o deslocamento à esquerda */
-    display: block;
-    margin: 0 auto; /* Centraliza a imagem */
-  }
-
-  .author img {
-    width: 35px; /* Reduz o tamanho da imagem */
-    height: 40px; /* Mantém o formato circular */
-    margin-left: 0; /* Garante alinhamento correto */
-    object-fit: cover; /* Ajusta proporcionalmente o conteúdo da imagem */
-  }
-
-  .author span {
-    font-size: 12px; /* Reduz o tamanho do texto para caber melhor */
-    font-weight: bold; /* Mantém o destaque no nome do autor */
-    margin-right: 110px;
-  }
-
-  .author small {
-    font-size: 10px; /* Reduz o tamanho do texto para se ajustar à tela */
-    color: #888; /* Cor ligeiramente mais clara para harmonia visual */
-  }
-
-  .testimonials h1 {
-    font-size: 1.5rem;
-  }
-
-  .testimonials h2 {
-    font-size: 1rem;
-  }
-
-  button-1.prev,
-  button-1.next {
-    font-size: 0.7rem;
-    padding: 12px;
-  }
-
-  .courses-grid {
-    grid-template-columns: 1fr; /* Apenas uma coluna */
-  }
 }
