@@ -32,11 +32,32 @@
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
-
+.menu ul li a.active {
+  color: #9f0726;  /* Cor do texto */
+  padding: 10px 15px;  /* Ajustar o padding */
+}
+.menu ul li a.no-hover:hover {
+  background-color: inherit;  /* Sem alteração de cor de fundo */
+  color: #9f0726;  
+  cursor: default;  /* Não altera o cursor */
+  border-color: #ffffff;
+}
 /* Efeito ao passar o mouse */
 .menu ul li a:hover {
   color: #fff;
   background-color: #9f0726;
   border-color: #9f0726;
 }
+
+.footer ul li a.active {
+  color: #9f0726;  /* Cor do texto */
+}
+.footer ul li a.no-hover:hover {
+  background-color: inherit;  /* Sem alteração de cor de fundo */
+  color: #9f0726;  
+  cursor: default;  /* Não altera o cursor */
+  border-color: #ffffff;
+}
+
+
 

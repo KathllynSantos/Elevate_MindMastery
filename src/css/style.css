@@ -1,6 +1,7 @@
 /* styles.css */
 body {
   margin: 0;
+  padding: 0;
   font-family: "Runalto", sans-serif;
 }
 .hero-section {
@@ -8,20 +9,17 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px 20px;
+  width: 100vw; /* Ocupa toda a largura da tela */
+  min-height: 70vh; /* Garante altura total da tela */
+  margin: 0; /* Remove margens extras */
   background-image: url("/src/img/banner.jpg");
-  background-size: cover; /* Ajusta a imagem de fundo para cobrir toda a área */
-  background-position: center; /* Centraliza a imagem de fundo */
-  background-repeat: no-repeat; /* Garante que a imagem não se repita */
-  background-attachment: fixed; /* Fixa a imagem de fundo ao rolar a página */
+  background-size: cover; /* Faz a imagem cobrir toda a seção */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fixa a imagem ao rolar a página */
   color: #ffffff;
-  height: 100vh; /* Altura da seção ocupa toda a altura da janela */
-  line-height: 1.5em;
-  padding-bottom: 1.5em;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 0 1em; /* Adiciona apenas um pequeno padding lateral */
 }
-
 
 .hero-content {
   max-width: 800px;
@@ -103,7 +101,19 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.course-link {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Mantém a cor padrão do texto */
+  display: block; /* Faz o link cobrir todo o bloco */
+}
 
+.course-item {
+  transition: transform 0.3s ease-in-out; /* Efeito suave ao passar o mouse */
+}
+
+.course-link:hover .course-item {
+  transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+}
 .testimonials {
   background-color: #9f0726;
   color: #fff;
@@ -217,23 +227,19 @@ button-1:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-image: url("/src/img/banner 1.jpg"); /* Substitua pelo caminho correto da imagem */
-  background-size: cover; /* Ajusta a imagem de fundo para cobrir toda a área */
-  background-position: center; /* Centraliza a imagem de fundo */
-  background-repeat: no-repeat; /* Garante que a imagem não se repita */
-  background-attachment: fixed; /* Fixa a imagem de fundo ao rolar a página */
   text-align: center;
-  color: #ffffff; /* Cor do texto */
+  width: 100vw; /* Ocupa toda a largura da tela */
+  height: 75vh; /* Ocupa toda a altura da tela */
+  background-image: url("/src/img/banner\ 1.jpg"); /* Certifique-se de que a imagem tem o nome correto */
+  background-size: cover; /* Faz a imagem cobrir toda a seção */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fixa a imagem ao rolar a página */
+  color: #9f0726; /* Cor do texto */
   position: relative;
-  overflow: hidden;
-  line-height: 1.5em;
-  padding-bottom: 1.5em;
-  padding-left: 1em;
-  padding-right: 1em;
+  margin: 0; /* Remove margens extras */
+  padding: 0 1em; /* Mantém um leve padding lateral */
 }
-
-
 .hero-section-01::before {
   content: "";
   position: absolute;
@@ -249,25 +255,21 @@ button-1:hover {
   ); /* Efeito de sobreposição transparente */
   z-index: 1;
 }
-
 .hero-content-01 {
   position: relative;
   z-index: 2; /* Garantir que o texto fique acima da camada de sobreposição */
   max-width: 90%; /* Limita a largura do conteúdo para evitar que ultrapasse as margens */
 }
-
 .hero-content-01 h1 {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
-
 .hero-content-01 p {
   font-size: 1.5rem;
   font-weight: lighter;
   margin-bottom: 30px;
 }
-
 .hero-button-01 {
   display: inline-block;
   padding: 10px 20px;
@@ -278,80 +280,9 @@ button-1:hover {
   border-radius: 25px;
   transition: all 0.3s ease-in-out;
 }
-
 .hero-button-01:hover {
   background-color: #9f0726;
   color: #fff;
-}
-
-
-.course-container {
-  background-image: url("/src/img/banner.jpg");
-  border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 800px;
-            overflow: hidden;
-            
-  
-}
-
-.text-content {
-  padding: 20px;
-  flex: 1;
-}
-
-.text-content h1 {
-  font-size: 24px;
-  margin: 0 0 10px;
-}
-
-.text-content h2 {
-  font-size: 18px;
-  font-weight: normal;
-  margin: 0 0 20px;
-}
-
-.text-content p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0 0 20px;
-}
-
-.text-content .features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 14px;
-}
-
-.text-content .features span {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.text-content .cta-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #d8a33a;
-  color: #000000;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.image-content {
-  flex: 1;
-  background-image: url('/src/img/1.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.features i {
-  font-size: 14px;
 }
 
 /* Rodapé */

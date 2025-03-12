@@ -133,6 +133,36 @@
     .hero-section {
       padding: 30px 10px; /* Ajusta o espaçamento interno */
     }
+
+      .course-section {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 20px;
+      }
+  
+      .course-text,
+      .course-benefits {
+          width: 100%;
+      }
+      .course-container-01 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .course-text-01, .course-benefits {
+        width: 100%;
+        margin: 0;
+    }
+
+    .course-image-01 {
+        width: 80%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
   }
   
   @media (max-width: 480px) {
@@ -240,3 +270,18 @@
       grid-template-columns: 1fr; /* Apenas uma coluna */
     }
   }
+
+  @media (max-width: 1024px) {
+    .course-container-01 {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center;
+        text-align: center;
+    }
+
+    .course-text-01,
+    .course-benefits {
+        max-width: 90%;
+        margin-right: 0;
+        margin-bottom: 20px; /* Espaço entre os blocos */
+    }
+}
