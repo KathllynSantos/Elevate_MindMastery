@@ -469,32 +469,3 @@ body {
     margin-top: 10px;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    /* Ajustes para telas menores */
-    .course-container-01 {
-        width: 100vw; /* Ocupa 100% da largura em dispositivos móveis */
-        padding: 1em; /* Aumenta o padding em dispositivos menores */
-    }
-
-    .course-text-01 {
-        width: 100%;
-        text-align: center; /* Centraliza o texto em telas pequenas */
-    }
-
-    .course-image-01 {
-        width: 60%; /* Ajusta a largura da imagem em telas menores */
-    }
-
-    .course-benefits {
-        width: 100%; /* Ocupa a largura total em telas pequenas */
-        position: relative; /* Ajuste de posição */
-        bottom: auto; /* Remove o bottom para o alinhamento correto */
-        margin-right: 0; /* Remove a margem à direita */
-    }
-
-    .footer-container {
-        flex-direction: column; /* Coloca as seções do rodapé em coluna */
-        align-items: center; /* Centraliza os itens */
-    }
-}

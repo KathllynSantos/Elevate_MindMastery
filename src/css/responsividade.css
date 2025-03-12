@@ -1,287 +1,173 @@
 /* Responsividade */
 
+@media (max-width: 1024px) {
+  .course-container-01 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .course-text-01, .course-benefits {
+    max-width: 90%;
+    margin: 0 auto 20px;
+  }
+  .course-image-01 img {
+    max-width: 90%;
+  }
+}
+
 @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      align-items: center; /* Centraliza os itens no header */
-      justify-content: center; /* Garante o alinhamento do logo e hambúrguer */
-    }
-  
-    .logo {
-      margin-bottom: 20px;
-    }
-  
-    .logo img {
-      height: 40px;
-    }
-  
-    .search-section {
-      display: none; /* Esconde a barra de pesquisa */
-    }
-  
-    /* Menu no mobile */
-    .menu {
-      display: none;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      background-color: #ffffff;
-      width: 100%;
-      text-align: center;
-      padding: 20px 0;
-      transition: all 0.3s ease-in-out; /* Transição suave */
-    }
-  
-    /* Quando o menu for ativado */
-    .menu.active {
-      display: block;
-    }
-  
-    /* Menu Hamburguer */
-    .menu-toggle {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      justify-content: center; /* Centraliza o botão hambúrguer */
-      transition: all 0.3s ease-in-out; /* Transição suave */
-    }
-  
-    .menu-toggle span {
-      width: 25px;
-      height: 3px;
-      background-color: #620007; /* Cor do menu hambúrguer */
-      transition: all 0.3s ease-in-out;
-    }
-  
-    .menu ul {
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      text-align: center;
-      padding-top: 10px;
-    }
-  
-    .menu ul li a {
-      font-size: 18px;
-      padding: 10px 0;
-    }
-  
-    /* Social icons */
-    .social-icons {
-      justify-content: center;
-      margin-top: 20px;
-      width: 100%;
-    }
-    .social-icons a {
-      padding: 0 10px;
-    }
-  
-    /* Hero section ajustada para telas pequenas */
-    .hero-section {
-      padding: 30px 20px;
-      height: 80vh;
-    }
-  
-    .hero-content h1 {
-      font-size: 2rem;
-    }
-  
-    .hero-content p {
-      font-size: 1rem;
-    }
-  
-    .hero-button {
-      padding: 10px 25px;
-    }
-  
-    .courses-grid {
-      grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
-    }
-  
-    /* Ajustes adicionais para botões de navegação do carrossel */
-    .carousel button {
-      padding: 10px;
-      font-size: 18px;
-    }
-  
-    .hero-content-01 h1 {
-      font-size: 2.5rem; /* Reduz o tamanho do título */
-    }
-  
-    .hero-content-01 p {
-      font-size: 1.2rem; /* Ajusta o tamanho do parágrafo */
-    }
-  
-    .hero-button-01 {
-      font-size: 1rem; /* Reduz o tamanho do botão */
-      padding: 8px 16px;
-    }
-    .courses-grid {
-      grid-template-columns: repeat(2, 1fr); /* Reduz para duas colunas */
-    }
-  
-    .hero-content h1 {
-      font-size: 2.5rem; /* Reduz tamanho do título */
-    }
-  
-    .hero-content p {
-      font-size: 0.9rem; /* Reduz tamanho do texto */
-    }
-  
-    .hero-section {
-      padding: 30px 10px; /* Ajusta o espaçamento interno */
-    }
-
-      .course-section {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          padding: 20px;
-      }
-  
-      .course-text,
-      .course-benefits {
-          width: 100%;
-      }
-      .course-container-01 {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .course-text-01, .course-benefits {
-        width: 100%;
-        margin: 0;
-    }
-
-    .course-image-01 {
-        width: 80%;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  
-  @media (max-width: 480px) {
-    .footer-section {
-      padding: 10px;
-    }
-    /* Header layout em telas pequenas */
-    .header {
-      flex-direction: column;
-      align-items: center; /* Centraliza os itens no header */
-      justify-content: center; /* Garante o alinhamento do logo e hambúrguer */
-    }
-  
-    .logo {
-      margin-bottom: 20px;
-    }
-  
-    .logo img {
-      height: 40px;
-    }
-  
-    .search-section {
-      display: none; /* Esconde a barra de pesquisa */
-    }
-  
-    /* Menu no mobile */
-    .menu {
-      display: none;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      background-color: #ffffff;
-      width: 100%;
-      text-align: center;
-      padding: 20px 0;
-    }
-    /* Quando o menu for ativado */
-    .menu.active {
-      display: block;
-    }
-    .hero-content-01 h1 {
-      font-size: 2rem; /* Reduz ainda mais o título */
-    }
-  
-    .hero-content-01 p {
-      font-size: 1rem; /* Ajusta o parágrafo para telas menores */
-    }
-  
-    .hero-button-01 {
-      font-size: 0.9rem; /* Ajusta o tamanho do botão */
-      padding: 6px 12px;
-    }
-  
-    .hero-section-01 {
-      height: auto; /* Permite que a seção se ajuste ao conteúdo */
-      padding: 20px; /* Adiciona espaço interno em dispositivos menores */
-    }
-    .testimonial-card {
-      flex: 0 0 80%; /* Ocupa toda a largura em telas menores */
-      max-width: 80%;
-    }
-  
-    .testimonial-card img {
-      max-width: 30px;
-      margin-bottom: 10px;
-      margin-left: 0; /* Remove o deslocamento à esquerda */
-      display: block;
-      margin: 0 auto; /* Centraliza a imagem */
-    }
-  
-    .author img {
-      width: 35px; /* Reduz o tamanho da imagem */
-      height: 40px; /* Mantém o formato circular */
-      margin-left: 0; /* Garante alinhamento correto */
-      object-fit: cover; /* Ajusta proporcionalmente o conteúdo da imagem */
-    }
-  
-    .author span {
-      font-size: 12px; /* Reduz o tamanho do texto para caber melhor */
-      font-weight: bold; /* Mantém o destaque no nome do autor */
-      margin-right: 110px;
-    }
-  
-    .author small {
-      font-size: 10px; /* Reduz o tamanho do texto para se ajustar à tela */
-      color: #888; /* Cor ligeiramente mais clara para harmonia visual */
-    }
-  
-    .testimonials h1 {
-      font-size: 1.5rem;
-    }
-  
-    .testimonials h2 {
-      font-size: 1rem;
-    }
-  
-    button-1.prev,
-    button-1.next {
-      font-size: 0.7rem;
-      padding: 12px;
-    }
-  
-    .courses-grid {
-      grid-template-columns: 1fr; /* Apenas uma coluna */
-    }
+  .logo {
+    margin-bottom: 20px;
   }
+  .logo img {
+    height: 40px;
+  }
+  .search-section {
+    display: none;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu.active {
+    display: block;
+  }
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #620007;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .menu ul li a {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+  .social-icons {
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .social-icons a {
+    padding: 0 10px;
+  }
+  .hero-section {
+    padding: 30px 10px;
+    height: auto;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  .hero-button {
+    padding: 10px 25px;
+  }
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  .course-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .course-text, .course-benefits {
+    width: 100%;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 
-  @media (max-width: 1024px) {
-    .course-container-01 {
-        flex-direction: column; /* Alinha os itens verticalmente */
-        align-items: center;
-        text-align: center;
-    }
-
-    .course-text-01,
-    .course-benefits {
-        max-width: 90%;
-        margin-right: 0;
-        margin-bottom: 20px; /* Espaço entre os blocos */
-    }
+@media (max-width: 480px) {
+  .footer-section {
+    padding: 10px;
+  }
+  .hero-content-01 h1 {
+    font-size: 2rem;
+  }
+  .hero-content-01 p {
+    font-size: 1rem;
+  }
+  .hero-button-01 {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+  .hero-section-01 {
+    height: auto;
+    padding: 20px;
+  }
+  .testimonial-card {
+    width: 100%;
+    max-width: none;
+  }
+  .testimonial-card img {
+    max-width: 30px;
+    display: block;
+    margin: 0 auto;
+  }
+  .author img {
+    width: 35px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .author span {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .author small {
+    font-size: 10px;
+    color: #888;
+  }
+  .testimonials h1 {
+    font-size: 1.5rem;
+  }
+  .testimonials h2 {
+    font-size: 1rem;
+  }
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-content h1 {
+    font-size: 1.8em;
+  }
+  .cta-button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+  .footer {
+    padding: 10px;
+  }
 }
