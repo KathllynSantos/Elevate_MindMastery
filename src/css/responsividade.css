@@ -1,287 +1,173 @@
 /* Responsividade */
 
 @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      align-items: center; /* Centraliza os itens no header */
-      justify-content: center; /* Garante o alinhamento do logo e hambúrguer */
-    }
   
-    .logo {
-      margin-bottom: 20px;
-    }
-  
-    .logo img {
-      height: 40px;
-    }
-  
-    .search-section {
-      display: none; /* Esconde a barra de pesquisa */
-    }
-  
-    /* Menu no mobile */
-    .menu {
-      display: none;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      background-color: #ffffff;
-      width: 100%;
-      text-align: center;
-      padding: 20px 0;
-      transition: all 0.3s ease-in-out; /* Transição suave */
-    }
-  
-    /* Quando o menu for ativado */
-    .menu.active {
-      display: block;
-    }
-  
-    /* Menu Hamburguer */
-    .menu-toggle {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      justify-content: center; /* Centraliza o botão hambúrguer */
-      transition: all 0.3s ease-in-out; /* Transição suave */
-    }
-  
-    .menu-toggle span {
-      width: 25px;
-      height: 3px;
-      background-color: #620007; /* Cor do menu hambúrguer */
-      transition: all 0.3s ease-in-out;
-    }
-  
-    .menu ul {
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      text-align: center;
-      padding-top: 10px;
-    }
-  
-    .menu ul li a {
-      font-size: 18px;
-      padding: 10px 0;
-    }
-  
-    /* Social icons */
-    .social-icons {
-      justify-content: center;
-      margin-top: 20px;
-      width: 100%;
-    }
-    .social-icons a {
-      padding: 0 10px;
-    }
-  
-    /* Hero section ajustada para telas pequenas */
-    .hero-section {
-      padding: 30px 20px;
-      height: 80vh;
-    }
-  
-    .hero-content h1 {
-      font-size: 2rem;
-    }
-  
-    .hero-content p {
-      font-size: 1rem;
-    }
-  
-    .hero-button {
-      padding: 10px 25px;
-    }
-  
-    .courses-grid {
-      grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
-    }
-  
-    /* Ajustes adicionais para botões de navegação do carrossel */
-    .carousel button {
-      padding: 10px;
-      font-size: 18px;
-    }
-  
-    .hero-content-01 h1 {
-      font-size: 2.5rem; /* Reduz o tamanho do título */
-    }
-  
-    .hero-content-01 p {
-      font-size: 1.2rem; /* Ajusta o tamanho do parágrafo */
-    }
-  
-    .hero-button-01 {
-      font-size: 1rem; /* Reduz o tamanho do botão */
-      padding: 8px 16px;
-    }
-    .courses-grid {
-      grid-template-columns: repeat(2, 1fr); /* Reduz para duas colunas */
-    }
-  
-    .hero-content h1 {
-      font-size: 2.5rem; /* Reduz tamanho do título */
-    }
-  
-    .hero-content p {
-      font-size: 0.9rem; /* Reduz tamanho do texto */
-    }
-  
-    .hero-section {
-      padding: 30px 10px; /* Ajusta o espaçamento interno */
-    }
-
-      .course-section {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          padding: 20px;
-      }
-  
-      .course-text,
-      .course-benefits {
-          width: 100%;
-      }
-      .course-container-01 {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .course-text-01, .course-benefits {
-        width: 100%;
-        margin: 0;
-    }
-
-    .course-image-01 {
-        width: 80%;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .footer-section {
-      padding: 10px;
-    }
-    /* Header layout em telas pequenas */
-    .header {
-      flex-direction: column;
-      align-items: center; /* Centraliza os itens no header */
-      justify-content: center; /* Garante o alinhamento do logo e hambúrguer */
-    }
-  
-    .logo {
-      margin-bottom: 20px;
-    }
-  
-    .logo img {
-      height: 40px;
-    }
-  
-    .search-section {
-      display: none; /* Esconde a barra de pesquisa */
-    }
-  
-    /* Menu no mobile */
-    .menu {
-      display: none;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      background-color: #ffffff;
-      width: 100%;
-      text-align: center;
-      padding: 20px 0;
-    }
-    /* Quando o menu for ativado */
-    .menu.active {
-      display: block;
-    }
-    .hero-content-01 h1 {
-      font-size: 2rem; /* Reduz ainda mais o título */
-    }
-  
-    .hero-content-01 p {
-      font-size: 1rem; /* Ajusta o parágrafo para telas menores */
-    }
-  
-    .hero-button-01 {
-      font-size: 0.9rem; /* Ajusta o tamanho do botão */
-      padding: 6px 12px;
-    }
-  
-    .hero-section-01 {
-      height: auto; /* Permite que a seção se ajuste ao conteúdo */
-      padding: 20px; /* Adiciona espaço interno em dispositivos menores */
-    }
-    .testimonial-card {
-      flex: 0 0 80%; /* Ocupa toda a largura em telas menores */
-      max-width: 80%;
-    }
-  
-    .testimonial-card img {
-      max-width: 30px;
-      margin-bottom: 10px;
-      margin-left: 0; /* Remove o deslocamento à esquerda */
-      display: block;
-      margin: 0 auto; /* Centraliza a imagem */
-    }
-  
-    .author img {
-      width: 35px; /* Reduz o tamanho da imagem */
-      height: 40px; /* Mantém o formato circular */
-      margin-left: 0; /* Garante alinhamento correto */
-      object-fit: cover; /* Ajusta proporcionalmente o conteúdo da imagem */
-    }
-  
-    .author span {
-      font-size: 12px; /* Reduz o tamanho do texto para caber melhor */
-      font-weight: bold; /* Mantém o destaque no nome do autor */
-      margin-right: 110px;
-    }
-  
-    .author small {
-      font-size: 10px; /* Reduz o tamanho do texto para se ajustar à tela */
-      color: #888; /* Cor ligeiramente mais clara para harmonia visual */
-    }
-  
-    .testimonials h1 {
-      font-size: 1.5rem;
-    }
-  
-    .testimonials h2 {
-      font-size: 1rem;
-    }
-  
-    button-1.prev,
-    button-1.next {
-      font-size: 0.7rem;
-      padding: 12px;
-    }
-  
-    .courses-grid {
-      grid-template-columns: 1fr; /* Apenas uma coluna */
-    }
+  .header {
+    flex-direction: row;
+    justify-content: space-between; /* Alinha a logo à esquerda e o menu à direita */
+    align-items: center;
+    justify-content: space-between; /* Deixa a logo na esquerda e o menu na direita */
+    padding: 10px 20px; /* Ajusta o espaçamento lateral */
+    grid-template-columns: 1fr; /* Uma coluna para pequenos dispositivos */
+    gap: 20px; /* Espaçamento entre os itens */
   }
 
-  @media (max-width: 1024px) {
-    .course-container-01 {
-        flex-direction: column; /* Alinha os itens verticalmente */
-        align-items: center;
-        text-align: center;
-    }
+  .logo {
+    margin-bottom: 0;
+  }
 
-    .course-text-01,
-    .course-benefits {
-        max-width: 90%;
-        margin-right: 0;
-        margin-bottom: 20px; /* Espaço entre os blocos */
-    }
+  .logo img {
+    height: 40px;
+  }
+
+  .search-section {
+    display: none; /* Esconde a barra de pesquisa */
+  }
+
+  /* Menu no mobile */
+  .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease-in-out; /* Transição suave */
+    
+  }
+
+  /* Quando o menu for ativado */
+  .menu.active {
+    display: flex;
+  }
+
+  /* Menu Hamburguer */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    justify-content: center; /* Centraliza o botão hambúrguer */
+    transition: all 0.3s ease-in-out; /* Transição suave */
+    align-items: flex-end;
+  }
+
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #620007; /* Cor do menu hambúrguer */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: right;
+    padding-top: 10px;
+  }
+
+  .menu ul li a {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+  .close-menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px; /* Aumenta o tamanho do botão */
+    cursor: pointer;
+    color: #9f0726; /* Usa a cor vermelha do seu site */
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove a borda */
+    padding: 5px; /* Adiciona um pequeno padding */
+    z-index: 1002; /* Garante que fique acima do menu */
+}
+
+.close-menu:hover {
+    color: #620007; /* Escurece a cor ao passar o mouse */
+}
+
+  /* Social icons */
+  .social-icons {
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .social-icons a {
+    padding: 0 10px;
+  }
+
+  /* Hero section ajustada para telas pequenas */
+  .hero-section {
+    padding: 30px 20px;
+    height: 80vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    padding: 10px 25px;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+  }
+
+  /* Ajustes adicionais para botões de navegação do carrossel */
+  .carousel button {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .hero-content-01 h1 {
+    font-size: 2.5rem; /* Reduz o tamanho do título */
+  }
+
+  .hero-content-01 p {
+    font-size: 1.2rem; /* Ajusta o tamanho do parágrafo */
+  }
+
+  .hero-button-01 {
+    font-size: 1rem; /* Reduz o tamanho do botão */
+    padding: 8px 16px;
+  }
+  
+  .course-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+  }
+
+  .course-text,
+  .course-benefits {
+      width: 100%;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    padding: 10px;
+  }
+  
+  .header {
+    flex-direction: row;
+    justify-content: space-between; /* Mantém a logo à esquerda e menu à direita */
+    align-items: center;
+  }
+  
+  .menu {
+    right: 0;
+  }
 }
