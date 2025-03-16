@@ -1,18 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Funcionalidade do Menu Responsivo
-    const menuToggle = document.getElementById("menu-toggle");
-    const menu = document.querySelector(".menu");
-    const menuItems = document.querySelectorAll(".menu li a"); // Itens do menu
-  
-    // Alternar a visibilidade do menu ao clicar no ícone
-    menuToggle.addEventListener("click", () => {
-      menu.classList.toggle("active");
-    });
-  
-    // Fechar o menu quando um item de navegação for clicado
-    menuItems.forEach(item => {
-      item.addEventListener("click", () => {
-        menu.classList.remove("active"); // Fecha o menu
-      });
-    });
+// Seleciona os elementos
+const menu = document.querySelector('.menu');
+const menuToggle = document.querySelector('.menu-toggle'); // O botão hamburguer
+const closeMenu = document.querySelector('.close-menu'); // O ícone de fechar (X)
+
+// Função para abrir o menu
+menuToggle.addEventListener('click', () => {
+  menu.classList.add('active'); // Adiciona a classe .active ao menu
+});
+
+// Função para fechar o menu
+closeMenu.addEventListener('click', () => {
+  menu.classList.remove('active'); // Remove a classe .active do menu
 });

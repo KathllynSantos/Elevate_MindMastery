@@ -1,245 +1,125 @@
-/* styles.css */
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: "Runalto", sans-serif;
+  box-sizing: border-box;
+  font-family: 'Runalto', sans-serif;
 }
+
+:root {
+  --primary-color:  #9f0726;
+  --secondary-color: #fff;
+  --accent-color: #450413;
+  --background-color: #f1f1f1;
+  --background-color-secondary:#FAF1E8;
+  --text-color: #333;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 16px;
+}     
+
+.header .logo,
+.header .menu {
+  margin: 0;
+  padding: 0;
+}
+
+/* Conteúdo principal */
+main, section {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+h1, p {
+  margin-top: 0;
+}
+
+/* Hero Section */
 .hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa a tela inteira */
+  padding: 60px 20px;
+  background-image: url(/src/img/banner.jpg);
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;
+  color: var(--secondary-color);
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 100vw; /* Ocupa toda a largura da tela */
-  min-height: 70vh; /* Garante altura total da tela */
-  margin: 0; /* Remove margens extras */
-  background-image: url("/src/img/banner.jpg");
-  background-size: cover; /* Faz a imagem cobrir toda a seção */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Fixa a imagem ao rolar a página */
-  color: #ffffff;
-  padding: 0 1em; /* Adiciona apenas um pequeno padding lateral */
+  z-index: 1; /* Coloca a section atrás do menu */
 }
 
-.hero-content {
-  max-width: 800px;
-}
-
-.hero-content h1 {
-  font-size: 3.3rem;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 20px;
-}
-
-.hero-content p {
-  font-size: 1rem;
-  line-height: 2;
-  margin-bottom: 30px;
-}
-
-.hero-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: #fff;
-  text-decoration: none;
-  border: 2px solid #fff;
-  border-radius: 25px;
-  transition: all 0.3s ease-in-out;
-}
-
-.hero-button:hover {
-  background-color: #fff;
-  color: #9f0726;
-}
-
-
-.training-courses {
-  padding: 20px;
-  background-color: #fff;
-  color: #9f0726; /* Cor do título */
-}
-
-.training-courses h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-align: left; /* Alinhamento do título à esqueda */
-  margin-right: 20px; /* Espaço entre o título e o grid */
-  padding-left: 20px;
-}
-.courses-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Quatro colunas */
-  gap: 20px;
-  padding: 0 20px;
-}
-
-.course-item {
-  text-align: center;
-  background-color: #fefefe;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.course-item img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
+.hero-section h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.course-item p {
-  font-size: 16px;
-  color: #333;
+.hero-section p {
+  font-size: 1.1rem;
+}
+
+/* Cursos */
+.training-courses {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.training-courses h1 {
+  text-align: left; 
+  margin-left: 20px; /* Adiciona um pequeno espaçamento da borda direita */
+  font-size: 2.5rem; /* Tamanho do texto */
+  color: var(--primary-color); /* Pode personalizar a cor aqui */
+}
+
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Define 4 colunas */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.course-item {
+  background-color: var(--secondary-color);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.247);
+  transition: transform 0.3s;
+  cursor: pointer;
 }
 
 .course-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.course-link {
-  text-decoration: none; /* Remove o sublinhado do link */
-  color: inherit; /* Mantém a cor padrão do texto */
-  display: block; /* Faz o link cobrir todo o bloco */
 }
 
-.course-item {
-  transition: transform 0.3s ease-in-out; /* Efeito suave ao passar o mouse */
-}
-
-.course-link:hover .course-item {
-  transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
-}
-.testimonials {
-  background-color: #9f0726;
-  color: #fff;
-  text-align: center;
-  padding: 80px 50px; /* Reduzi o padding geral */
-}
-
-.testimonials h1 {
-  font-size: 24px;
-  margin-bottom: 5px; /* Menor espaço entre o título e o subtítulo */
-  text-transform: uppercase;
-  text-align: left;
-  letter-spacing: 2px;
-}
-
-.testimonials h2 {
-  font-size: 20px;
-  text-align: left;
-  font-weight: lighter;
-  margin-bottom: 50px; /* Menor espaço após o subtítulo */
-}
-
-.carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.carousel-container {
-  display: flex;
-  overflow: hidden;
-  width: 80%;
-  scroll-behavior: smooth;
-}
-
-.testimonial-card {
-  flex: 0 0 27.27%; /* Ajuste para 3 cards visíveis */
-  max-width: 33.33%;
-  background-color: #fff;
-  color: #333;
-  border-radius: 25px;
-  margin: 0 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
-}
-
-.testimonial-card img {
-  max-width: 30px;
-  margin-bottom: 10px;
-  margin-left: 120px;
-}
-
-.testimonial-card p {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.author {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* Cria espaço proporcional entre os elementos */
-  margin-top: 10px;
-}
-
-.author img {
-  border-radius: 50%;
-  width: 60px; /* Tamanho mais razoável para uma imagem de perfil */
-  height: 30px; /* Garante que a imagem seja sempre quadrada */
-  margin-left: 0; /* Remove margens laterais desnecessárias */
-}
-
-.author span {
-  font-size: 14px;
-  font-weight: bold; /* Dá destaque ao nome do autor */
-}
-
-.author small {
-  color: #666;
-  font-size: 12px;
-}
-button-1.prev,
-button-1.next {
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-button-1.prev {
-  left: 5%;
-}
-
-button-1.next {
-  right: 5%;
-}
-
-button-1:hover {
-  background-color: #ffffff4f;
+.course-item img {
+  width: 100%;
+  border-radius: 5px;
 }
 
 .hero-section-01 {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa a tela inteira */
+  padding: 60px 20px;
+  background-image: url(/src/img/banner\ 1.jpg); /* Coloque a URL da sua imagem aqui */
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;
+  color: var(--secondary-color);
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 100vw; /* Ocupa toda a largura da tela */
-  height: 75vh; /* Ocupa toda a altura da tela */
-  background-image: url("/src/img/banner\ 1.jpg"); /* Certifique-se de que a imagem tem o nome correto */
-  background-size: cover; /* Faz a imagem cobrir toda a seção */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Fixa a imagem ao rolar a página */
-  color: #9f0726; /* Cor do texto */
-  position: relative;
-  margin: 0; /* Remove margens extras */
-  padding: 0 1em; /* Mantém um leve padding lateral */
+  z-index: 1; /* Garante que o conteúdo fique acima da imagem de fundo */
 }
+
 .hero-section-01::before {
   content: "";
   position: absolute;
@@ -247,97 +127,449 @@ button-1:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(
-    255,
-    255,
-    255,
-    0.4
-  ); /* Efeito de sobreposição transparente */
-  z-index: 1;
-}
-.hero-content-01 {
-  position: relative;
-  z-index: 2; /* Garantir que o texto fique acima da camada de sobreposição */
-  max-width: 90%; /* Limita a largura do conteúdo para evitar que ultrapasse as margens */
-}
-.hero-content-01 h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.hero-content-01 p {
-  font-size: 1.5rem;
-  font-weight: lighter;
-  margin-bottom: 30px;
-}
-.hero-button-01 {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  color: #9f0726;
-  text-decoration: none;
-  border: 2px solid #9f0726;
-  border-radius: 25px;
-  transition: all 0.3s ease-in-out;
-}
-.hero-button-01:hover {
-  background-color: #9f0726;
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de transparência */
+  z-index: -1; /* Coloca a camada abaixo do conteúdo */
 }
 
-/* Rodapé */
-.footer {
-  background-color: #fff;
-  color: #9f0726;
+.hero-content-01 {
+  text-align: center;
+  z-index: 2; /* Certifica-se de que o conteúdo fique acima da imagem */
+}
+
+.hero-section-01 h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--secondary-color); /* Personalize a cor */
+}
+
+.hero-section-01 p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-button-01 {
+  background-color:var(--primary-color); /* Ajuste a cor do botão */
+  color: var(--secondary-color);
+  padding: 15px 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.hero-button-01:hover {
+  background-color: var(--secondary-color); 
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color); /* Define a largura da borda */
+}
+
+
+
+/* Seção de curso */
+.course-container-01 {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa a tela inteira */
+  padding: 60px 20px;
+  background-image: url(/src/img/Banner\.jpg); /* Coloque a URL da sua imagem aqui */
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;
+  color: var(--secondary-color);
+  text-align: left; /* Alinhamento do texto à esquerda */
+  display: flex;
+  justify-content: space-between; /* Alinha os itens (imagem e texto) nas extremidades */
+  align-items: center; /* Alinha verticalmente no centro */
+  z-index: 1; /* Garante que o conteúdo fique acima da imagem de fundo */
+}
+
+.course-image-01 {
+  flex: 1; /* Ocupa o espaço disponível */
+  text-align: right; /* Alinha a imagem à direita */
+}
+
+.course-image-01 img {
+  width: 80%; /* Ajusta a largura da imagem */
+  height: auto; /* Mantém a proporção da altura em relação à largura */
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto; /* Centraliza a imagem */
+  display: block; /* Remove o espaçamento abaixo da imagem */
+}
+
+.course-text-01 {
+  position: relative;
+  z-index: 1; /* Garante que o conteúdo do texto apareça acima do fundo */
+  padding: 20px;
+  flex: 1; /* Ocupa o espaço restante */
+}
+
+.course-text-01 h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+.course-text-01 h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: var(--secondary-color);
+}
+
+.course-details {
+  margin-top: 20px;
+}
+
+.course-details img {
+  width: 20px; /* Ajuste o valor conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.course-details ul {
+  list-style: none;
+  display: grid; /* Usando grid para fazer duas colunas */
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas de igual tamanho */
+  gap: 10px; /* Espaço entre os itens */
+}
+
+.course-details li {
+  display: flex;
+  gap: 8px; /* Diminui o espaço entre o ícone e o texto */
+  align-items: center;
+}
+
+.course-details a.cta-button {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--secondary-color);
+  padding: 8px 16px; /* Diminui o preenchimento do botão */
+  font-size: 1rem; /* Tamanho da fonte */
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 20px;
+  border: 2px solid var(--secondary-color);
+  transition: background-color 0.3s, color 0.3s; /* Transição suave para a cor de fundo e texto */
+}
+
+.course-details a.cta-button:hover {
+  background-color: var(--secondary-color); 
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color); 
+  font-weight: bold;/* Define a largura da borda */
+
+}
+
+/* Seções de aprendizado e benefícios */
+.course-section {
+  position: relative;
+  background-image: url(/src/img/Banner\ 2.jpg); /* Substitua pela URL do seu banner */
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;
+  padding: 40px 20px;
+  margin-top: 0px;
+  color: #fff; /* Definindo a cor do texto padrão */
+  display: flex; /* Exibe os dois blocos lado a lado */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-text {
+  background-color: rgba(255, 255, 255, 0.897); /* Fundo transparente para o texto */
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  margin-right: 20px;
+
+}
+
+.course-text h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.course-text p {
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.course-benefits {
+  background-color: #9f0725d0; /* Fundo escuro transparente para os benefícios */
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+}
+
+.course-benefits h3 {
+  color:var(--secondary-color);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.course-benefits p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color:var(--secondary-color); /* Garantindo que o texto dentro de 'course-benefits' seja branco */
+}
+
+/* Seção de chamada para ação */
+.course-benefits-header {
+  position: relative;
+  background-image: url(/src/img/Banner\.jpg); /* Substitua pela URL do seu banner */
+  background-size: cover;
+  background-attachment: fixed; /* Efeito Parallax */
+  background-position: center;
+  padding: 20px 20px;
+  margin-top: 0px;
+  color: var(--secondary-color); /* Definindo a cor do texto */
+  display: flex;
+  justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
+  align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  text-align: center; /* Centraliza o texto dentro do elemento */
+}
+
+.course-benefits-header h1 {
+  font-size: 2rem; /* Ajuste o tamanho do texto conforme necessário */
+  font-weight: bold;
+  margin: 0; /* Remove qualquer margem padrão */
+}
+
+.course-benefits-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas na parte superior */
+  grid-gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; /* Centraliza a grid na página */
+}
+
+.row {
+  display: contents; /* Faz os itens da linha se comportarem como parte da grid principal */
+}
+
+.benefit-item {
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Centraliza os itens da linha inferior */
+.benefits-grid .row:nth-child(2) {
+  display: flex;
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 20px; /* Espaço entre os itens */
+  grid-column: 1 / -1; /* Garante que a linha ocupe toda a largura disponível */
+}
+
+.benefits-grid .row:nth-child(2) .benefit-item {
+  width: 30%; /* Ajusta o tamanho dos itens da segunda linha */
+}
+
+.container-module {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: left;
+}
+
+
+.module {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  margin-left: 20px; /* Afasta o módulo da margem esquerda */
+}
+
+.module-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.parts-count{color: var(--secondary-color);
+  font-size: 14px;
+  margin-right: -150px; }
+
+.parts-count-1 {
+  color: var(--secondary-color);
+  font-size: 14px;
+  margin-right: -103px; /* Diminui o espaçamento entre o texto e a seta */
+}
+
+.arrow-icon {
+  font-size: 18px;
+  color: var(--secondary-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+.module-list {
+  display: none;
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.module-list li {
+  font-size: 14px;
   padding: 10px;
-  border-top: 5px solid #9f0726;
-  
-  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.module.open .module-list {
+  display: block;
+}
+
+.module.open .arrow-icon {
+  transform: rotate(180deg); /* Faz a seta girar */
+}
+/* Define a seção principal */
+.cta-section {
+  width: 98.5vw; /* Reduzindo a largura */
+  height: 80vh; /* Reduzindo a altura */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  margin: auto; /* Centraliza na tela */
+}
+
+/* Container flexível */
+.cta-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Imagem com efeito gradiente */
+.cta-image {
+  flex: 1;
+  background: url('/src/img/sorrindo.png') center/cover no-repeat;
+  position: relative;
+  min-height:80vh;
+}
+
+.cta-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), #9f0726);
+}
+
+/* Conteúdo do texto */
+.cta-content {
+  flex: 1;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  height: 100%;
+}
+
+.cta-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.cta-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Botão estilizado */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--secondary-color);
+  color:var(--secondary-color);
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3em;
+  transition: 0.3s;
+  max-width: 200px;
+  width: auto;
+}
+
+.cta-button span {
+  margin-left: 8px;
+  font-size: 1em;
+}
+
+.cta-button:hover {
+  background-color: #e0e0e0;
+  color: #9f0726;
+
+}
+
+
+.footer {
+  background-color: var(--background-color-secondary); /* Cor de fundo igual à da imagem */
+  color: var(--primary-color); /* Cor do texto semelhante ao design */
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'serif'; /* Ajuste conforme necessário */
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap; /* Permite que os itens se reorganizem em telas menores */
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .footer-section {
-  flex: 1 1 300px; /* Ajuste flexível para cada seção do rodapé */
+  flex: 1;
   margin: 10px;
+  min-width: 250px;
 }
 
-.footer-logo {
-  max-width: 300px;
-  height: auto;
+.footer ul li a.active {
+  color: var(--primary-color);  /* Cor do texto */
+}
+.footer ul li a.no-hover:hover {
+  background-color: inherit;  /* Sem alteração de cor de fundo */
+  color:var(--primary-color);  
+  cursor: default;  /* Não altera o cursor */
+  border-color: var(--secondary-color);
+}
+
+.logo-section img {
+  width: 150px;
   margin-bottom: 10px;
 }
-.social-icn {
-  display: flex;
-  justify-content: left; /* Centraliza os ícones */
-  gap: 10px; /* Espaçamento entre os ícones */
-  margin-top: 10px;
-}
 
-.social-icn a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  
-}
-
-.social-icn img {
-
-  width: 70%;
-  height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.social-icn img:hover {
-  transform: scale(1.1); /* Aumenta ligeiramente o ícone ao passar o mouse */
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Adiciona sombra */
+.social-icn a img {
+  width: 24px; /* Ajuste conforme necessário */
+  margin: 5px;
 }
 
 .quick-links ul {
@@ -345,36 +577,514 @@ button-1:hover {
   padding: 0;
 }
 
-.quick-links ul li {
-  margin: 10px 0;
+.quick-links h3 {
+  text-align: left; 
+}
+.quick-links ul ,
+.contact-us {
+  text-align: left; 
 }
 
-.quick-links ul li a {
-  color: #333;
+.quick-links li a {
   text-decoration: none;
-  transition: color 0.3s;
-}
-
-.quick-links ul li a:hover {
-  color: #9f0726;
+  color: var(--text-color);
 }
 
 .contact-us p {
-  margin: 10px 0;
-  color: #333;
+  margin: 5px 0;
+  color: var(--text-color); /* Deixa o texto dos contatos em cinza */
 }
 
 .contact-us a {
-  color: #333; /* Cor do texto para combinar com o design */
-  text-decoration: none; /* Remove o sublinhado padrão */
-  transition: color 0.3s ease-in-out;
+  text-decoration: none; /* Remove a linha do email */
+  color: var(--text-color); /* Deixa o email na mesma cor do texto */
 }
 
-
 .footer-bottom {
-  text-align: center;
-  padding: 2px; 
-  background-color: #450413;
-  color: #fff;
-  margin-top: 10px;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  display: flex; 
+  justify-content: space-between; /* Alinha os elementos horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  padding: 10px 20px;
+  flex-wrap: wrap; /* Garante que os elementos se ajustem em telas menores */
+  font-size: 14px; /* Diminui o tamanho do texto */
+}
+
+.footer-bottom p {
+  margin: 0; /* Remove margens extras */
+}
+
+.footer-bottom .footer-links {
+  display: flex;
+  gap: 15px; /* Espaço entre os links */
+  font-size: 13px; /* Deixa os links um pouco menores */
+}
+
+.footer-bottom .footer-links a {
+  color:var(--secondary-color);
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .training-courses h1 {
+    font-size: 2rem; /* Reduz o tamanho do título */
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas médias */
+  }
+
+  .hero-section-01 h1 {
+    font-size: 2.5rem; /* Diminui o tamanho da fonte para telas menores */
+  }
+
+  .hero-section-01 p {
+    font-size: 1.1rem;
+  }
+
+  .hero-button-01 {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+
+  .course-section {
+    flex-direction: column; /* Empilha os itens verticalmente em telas pequenas */
+    padding: 20px 10px; /* Ajusta o padding para telas menores */
+  }
+
+  .course-text, .course-benefits {
+    margin-right: 0;
+    flex: 1 0 100%; /* Faz com que os elementos ocupem 100% da largura */
+    margin-bottom: 20px; /* Adiciona espaçamento entre os blocos */
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+  }
+
+  .benefits-grid .row:nth-child(2) .benefit-item {
+    width: 45%; /* Ajusta a largura dos itens na segunda linha */
+  }
+
+  .course-benefits-header h1 {
+    font-size: 1.5rem; /* Reduz o tamanho da fonte em telas menores */
+  }
+  .cta-section {
+    height: 70vh;
+  }
+  .cta-content {
+    padding: 30px;
+  }
+  .cta-content h1 {
+    font-size: 2.2em;
+  }
+  .cta-content p {
+    font-size: 1.1em;
+  }
+  .cta-button {
+    font-size: 1.1em;
+    padding: 8px 16px;
+  }
+  
+}
+
+/* Responsividade para telas pequenas (celulares) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 15px;
+    height: 80vh; /* Diminui um pouco a altura para telas menores */
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+
+  .training-courses h1 {
+    font-size: 1.8rem; /* Tamanho do título reduzido para telas menores */
+    margin-left: 10px; /* Ajusta a margem para o título */
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas pequenas */
+  }
+
+  .course-item {
+    padding: 10px; /* Reduz o padding para itens em telas pequenas */
+  }
+
+  .hero-section-01 {
+    padding: 40px 15px; /* Ajusta o padding em telas menores */
+  }
+
+  .hero-section-01 h1 {
+    font-size: 2rem; /* Ajuste ainda maior para telas pequenas */
+  }
+
+  .hero-section-01 p {
+    font-size: 1rem;
+  }
+
+  .hero-button-01 {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .course-container-01 {
+    flex-direction: column; /* Muda o layout para coluna em telas menores */
+    height: auto; /* Ajusta a altura automaticamente */
+    padding: 30px 20px;
+  }
+
+  .course-image-01 {
+    flex: none; /* Retira o flex e permite que a imagem tenha tamanho adequado */
+    text-align: center; /* Centraliza a imagem */
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
+  }
+
+  .course-image-01 img {
+    width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+    max-width: 400px; /* Limita a largura máxima da imagem */
+  }
+
+  .course-text-01 {
+    flex: none; /* Retira o flex e permite que o texto tenha tamanho adequado */
+    padding: 20px 0;
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .course-text-01 h2 {
+    font-size: 1.8rem; /* Ajusta o tamanho da fonte do título */
+  }
+
+  .course-text-01 h3 {
+    font-size: 1rem; /* Ajusta o tamanho da fonte do subtítulo */
+  }
+
+  .course-details ul {
+    grid-template-columns: 1fr; /* Muda para uma coluna em telas menores */
+  }
+
+  .course-details li {
+    justify-content: center; /* Centraliza o conteúdo de cada item */
+  }
+
+  .course-details a.cta-button {
+    width: 100%; /* Faz o botão ocupar toda a largura disponível */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    margin-top: 15px;
+  }
+
+  .course-text h2 {
+    font-size: 1.5rem; /* Diminui o tamanho da fonte do título */
+  }
+
+  .course-text p {
+    font-size: 0.9rem; /* Diminui o tamanho da fonte do parágrafo */
+  }
+
+  .course-benefits h3 {
+    font-size: 1.2rem; /* Diminui o tamanho da fonte do subtítulo */
+  }
+
+  .course-benefits p {
+    font-size: 0.9rem; /* Diminui o tamanho da fonte do parágrafo */
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr; /* 1 coluna para dispositivos móveis */
+  }
+
+  .benefits-grid .row:nth-child(2) {
+    display: grid; /* Alteração aqui para que a segunda linha tenha uma grid separada */
+    grid-template-columns: 1fr; /* Garante que a segunda linha tenha 1 item por vez */
+    grid-gap: 10px; /* Adiciona espaçamento entre os itens */
+  }
+
+  .benefits-grid .row:nth-child(2) .benefit-item {
+    width: 100%; /* Os itens na segunda linha ocuparão 100% da largura */
+    margin: 10px 0; /* Adiciona espaço entre os itens */
+  }
+
+  .course-benefits-header h1 {
+    font-size: 1.2rem; /* Ajuste de tamanho do título */
+  }
+
+  .course-benefits-header {
+    padding: 15px; /* Ajusta o padding para telas menores */
+  }
+
+  container-module {
+    max-width: 100%;
+    padding: 0 10px; /* Ajusta o padding nas telas menores */
+  }
+
+  .module-title {
+    font-size: 18px; /* Diminui o tamanho da fonte em telas pequenas */
+  }
+
+  .parts-count,
+  .parts-count-1 {
+    font-size: 12px; /* Ajusta o tamanho da fonte dos contadores */
+    margin-right: -80px; /* Ajusta o espaçamento */
+  }
+
+  .arrow-icon {
+    font-size: 16px; /* Diminui o tamanho da seta */
+  }
+
+  .container-module {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .module-title {
+    font-size: 16px;
+  }
+
+  .parts-count,
+  .parts-count-1 {
+    font-size: 10px;
+    margin-right: 10px; /* Ajuste para que fiquem mais próximos */
+  }
+
+  .arrow-icon {
+    font-size: 14px;
+  }
+
+  .module-header {
+    flex-direction: row; /* Garante que os itens fiquem lado a lado */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: center; /* Alinha os itens verticalmente */
+  }
+
+  .module-list li {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .module {
+    padding: 10px;
+  }
+
+  .cta-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .cta-image {
+    width: 100%;
+    height: 40vh;
+    min-height: 40vh;
+  }
+  .cta-content {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  .cta-content h1 {
+    font-size: 2em;
+  }
+  .cta-content p {
+    font-size: 1em;
+  }
+  .cta-button {
+    font-size: 1em;
+    padding: 8px 14px;
+  }
+}
+
+  .footer-container {
+    max-width: 90%; /* Reduz a largura do container */
+    padding: 0 10px;
+  }
+
+  .quick-links h3, .contact-us h3 {
+    font-size: 13px; /* Reduz tamanho do título */
+    letter-spacing: 1px;
+  }
+
+  .quick-links li a,
+  .contact-us p,
+  .contact-us a {
+    font-size: 14px; /* Deixa o texto um pouco menor */
+  }
+
+  .quick-links h3 {
+    text-align: center;
+  }
+
+  .quick-links ul {
+    display: flex;
+    flex-direction: column; /* Mantém a lista empilhada */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .footer-bottom .footer-links {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os links fiquem lado a lado e se ajustem conforme necessário */
+    justify-content: center;
+    gap: 10px;
+  }
+
+
+/* Responsividade para telas muito pequenas (smartphones menores) */
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section p {
+    font-size: 0.8rem;
+  }
+
+  .training-courses h1 {
+    font-size: 1.5rem; /* Tamanho do título reduzido ainda mais */
+    margin-left: 5px; /* Ajuste de margem */
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+  }
+
+  .course-item {
+    padding: 8px; /* Reduz o padding para telas bem pequenas */
+  }
+
+  .hero-section-01 {
+    padding: 30px 10px;
+  }
+
+  .hero-section-01 h1 {
+    font-size: 1.8rem; /* Tamanho ainda menor para telas muito pequenas */
+  }
+
+  .hero-section-01 p {
+    font-size: 0.9rem;
+  }
+
+  .hero-button-01 {
+    padding: 8px 15px;
+    font-size: 0.8rem; /* Tamanho do botão menor */
+  }
+
+  .course-container-01 {
+    padding: 20px 10px;
+  }
+
+  .course-text-01 h2 {
+    font-size: 1.5rem; /* Ajusta o tamanho do título para telas muito pequenas */
+  }
+
+  .course-text-01 h3 {
+    font-size: 0.9rem; /* Ajusta o tamanho do subtítulo */
+  }
+
+  .course-details a.cta-button {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte do botão */
+    padding: 6px 12px; /* Ajusta o preenchimento do botão */
+  }
+
+  .module-title {
+    font-size: 16px; /* Diminui mais o tamanho da fonte */
+  }
+
+  .parts-count,
+  .parts-count-1 {
+    font-size: 10px; /* Diminui ainda mais os contadores */
+    margin-right: -60px; /* Ajuste para telas muito pequenas */
+  }
+
+  .arrow-icon {
+    font-size: 14px; /* Diminui o tamanho da seta */
+  }
+
+  .module-title {
+    font-size: 14px; /* Diminui mais o tamanho da fonte */
+  }
+
+  .parts-count,
+  .parts-count-1 {
+    font-size: 10px;
+    margin-right: 5px; /* Ajuste para telas muito pequenas */
+  }
+
+  .arrow-icon {
+    font-size: 12px; /* Diminui o tamanho da seta ainda mais */
+  }
+
+  .module-list li {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .module-header {
+    flex-direction: row; /* Garante que os itens fiquem lado a lado */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: center; /* Alinha os itens verticalmente */
+  }
+
+  .module {
+    padding: 8px; /* Ajusta o padding da module */
+  }
+
+  .cta-section {
+    width: 100vw;
+    height: auto;
+  }
+  .cta-content {
+    padding: 15px;
+  }
+  .cta-content h1 {
+    font-size: 1.8em;
+  }
+  .cta-content p {
+    font-size: 0.95em;
+  }
+  .cta-button {
+    font-size: 1em;
+    padding: 6px 12px;
+    max-width: 180px;
+  }
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .quick-links li,
+  .contact-us p {
+    font-size: 10px;
+  }
+
+  .footer-bottom .footer-links {
+    flex-direction: row; /* Mantém os links lado a lado */
+    flex-wrap: wrap; /* Quebra linha se precisar */
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .footer-bottom {
+    font-size: 15px; /* Reduz o tamanho do texto */
+  }
 }
