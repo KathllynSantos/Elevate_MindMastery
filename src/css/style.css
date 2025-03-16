@@ -171,7 +171,7 @@ h1, p {
   width: 100%;
   height: 100vh; /* Ocupa a tela inteira */
   padding: 60px 20px;
-  background-image: url(/src/img/Banner\.jpg); /* Coloque a URL da sua imagem aqui */
+  background-image: url(/src/img/banner.jpg); /* Coloque a URL da sua imagem aqui */
   background-size: cover;
   background-attachment: fixed; /* Parallax effect */
   background-position: center;
