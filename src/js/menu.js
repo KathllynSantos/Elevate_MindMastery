@@ -1,14 +1,14 @@
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-const closeMenu = document.getElementById('close-menu'); // Adicione isso
+// Seleciona os elementos
+const menu = document.querySelector('.menu');
+const menuToggle = document.querySelector('.menu-toggle'); // O botão hamburguer
+const closeMenu = document.querySelector('.close-menu'); // O ícone de fechar (X)
 
+// Função para abrir o menu
 menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
+  menu.classList.add('active'); // Adiciona a classe .active ao menu
 });
 
-// Adicione isso:
-if (closeMenu) {
-    closeMenu.addEventListener('click', () => {
-        menu.classList.remove('active');
-    });
-}
+// Função para fechar o menu
+closeMenu.addEventListener('click', () => {
+  menu.classList.remove('active'); // Remove a classe .active do menu
+});
