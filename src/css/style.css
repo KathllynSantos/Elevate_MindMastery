@@ -316,7 +316,7 @@ h1, p {
 /* Seção de chamada para ação */
 .course-benefits-header {
   position: relative;
-  background-image: url(/src/img/Banner\.jpg); /* Substitua pela URL do seu banner */
+  background-image: url(/src/img/banner.jpg); /* Substitua pela URL do seu banner */
   background-size: cover;
   background-attachment: fixed; /* Efeito Parallax */
   background-position: center;
