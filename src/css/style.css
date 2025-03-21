@@ -63,6 +63,65 @@ h1, p {
 .hero-section p {
   font-size: 1.1rem;
 }
+.container {
+  padding: 50px;
+  background-color: var(--background-color-secondary);
+}
+.title, .subtitle, .heading {
+  text-align: center;
+}
+.title {
+  color: var(--primary-color);
+  font-size: 36px;
+}
+.subtitle {
+  color: var(--primary-color);
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.heading {
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.course {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  color: var(--text-color);
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.banner {
+  background-image: url(/src/img/banner.jpg);
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 35px 15px;
+}
+.banner h1 {
+  font-size: 30px;
+  margin: 0;
+}
+.banner p {
+  font-size: 18px;
+  max-width: 1080px;
+  margin: 10px auto;
+  line-height: 1.5;
+}
 
 /* Cursos */
 .training-courses {
@@ -625,7 +684,11 @@ h1, p {
   color:var(--secondary-color);
   text-decoration: none;
 }
-
+@media (max-width: 1200px) {
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 1024px) {
   .hero-section h1 {
     font-size: 2rem;
@@ -904,7 +967,34 @@ h1, p {
     font-size: 1em;
     padding: 8px 14px;
   }
-}
+  .courses {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .banner {
+    padding: 25px 10px;
+  }
+  
+  .banner h1 {
+    font-size: 24px;
+  }
+
+  .banner p {
+    font-size: 16px;
+    max-width: 90%;
+  }
 
   .footer-container {
     max-width: 90%; /* Reduz a largura do container */
@@ -944,8 +1034,7 @@ h1, p {
     justify-content: center;
     gap: 10px;
   }
-
-
+}
 /* Responsividade para telas muito pequenas (smartphones menores) */
 @media (max-width: 480px) {
   .hero-section h1 {
@@ -1063,6 +1152,35 @@ h1, p {
     font-size: 1em;
     padding: 6px 12px;
     max-width: 180px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .banner {
+    padding: 20px 10px;
+  }
+
+  .banner h1 {
+    font-size: 20px;
+  }
+
+  .banner p {
+    font-size: 14px;
+    max-width: 100%;
   }
   .footer {
     padding: 30px 15px;
