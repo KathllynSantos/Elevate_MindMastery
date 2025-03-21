@@ -47,11 +47,16 @@
     font-family: 'Poppins', sans-serif;
   }
   
-  .menu a.active{
+  .menu a.active {
+    color: var(--primary-color);
+    pointer-events: auto; /* Mantém a navegação ativa */
+  }
+  
+  .menu a.active:hover {
     color: var(--primary-color);
   }
   
-  .menu a:hover {
+  .menu a:not(.active):hover {
     color: var(--background-color);
     background-color: var(--primary-color);
   }
