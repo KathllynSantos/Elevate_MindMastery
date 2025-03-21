@@ -49,7 +49,7 @@
   
   .menu a.active {
     color: var(--primary-color);
-    pointer-events: auto; /* Mantém a navegação ativa */
+    pointer-events: auto; 
   }
   
   .menu a.active:hover {
