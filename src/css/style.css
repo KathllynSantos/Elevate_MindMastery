@@ -586,8 +586,27 @@ h1, p {
   color: #9f0726;
 
 }
+.hero-section-02 {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Ocupa a tela inteira */
+  padding: 60px 20px;
+  background-image: url(/src/img/banner.jpg);
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;
+  color: var(--secondary-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Coloca a section atrás do menu */
+}
 
-
+.hero-section-02 h1 {
+  font-size: 5.5rem;
+  margin-bottom: 10px;
+}
 .footer {
   background-color: var(--background-color-secondary); /* Cor de fundo igual à da imagem */
   color: var(--primary-color); /* Cor do texto semelhante ao design */
