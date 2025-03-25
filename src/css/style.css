@@ -318,7 +318,7 @@ h1, p {
 }
 .course-section-03 {
   position: relative;
-  background-image: url(/src/img/Banner\ 3.jpg); /* Substitua pela URL do seu banner */
+  background-image: url(/src/img/banner\ 3.jpg); /* Substitua pela URL do seu banner */
   background-size: cover;
   background-attachment: fixed; /* Parallax effect */
   background-position: center;
