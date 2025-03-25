@@ -316,7 +316,19 @@ h1, p {
   font-weight: bold;/* Define a largura da borda */
 
 }
-
+.course-section-03 {
+  position: relative;
+  background-image: url(/src/img/Banner\ 3.jpg); /* Substitua pela URL do seu banner */
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;
+  padding: 40px 20px;
+  margin-top: 0px;
+  color: #fff; /* Definindo a cor do texto padrão */
+  display: flex; /* Exibe os dois blocos lado a lado */
+  justify-content: space-between;
+  align-items: center;
+}
 /* Seções de aprendizado e benefícios */
 .course-section {
   position: relative;
@@ -604,12 +616,116 @@ h1, p {
 }
 
 .hero-section-02 h1 {
-  font-size: 5.5rem;
+  font-size: 3.5rem;
   margin-bottom: 10px;
 }
+
+.course-overview {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.course-overview h2 {
+  margin-bottom: 10px;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.course-overview p {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.course-overview ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.course-overview ul li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.container-cursos {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  background-color: var(--background-color);
+}
+.back-link {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 20px; /* Adiciona espaço da esquerda */
+  transition: color 0.3s ease-in-out;
+}
+
+.back-link:hover {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+.message {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);                                                    
+  margin-bottom: 20px;
+}
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-button {
+  background-color: var(--primary-color); /* Roxo suave */
+  border-radius: 8px;
+  padding: 12px 20px;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  width: 48%;
+}
+
+.nav-button a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-button small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.arrow {
+  font-size: 18px;
+}
+
+.nav-button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+  border: 1px solid var(--primary-color);
+}
+.nav-button:hover a {
+  color: var(--primary-color); /* Branco mais suave */
+}
+
 .footer {
   background-color: var(--background-color-secondary); /* Cor de fundo igual à da imagem */
   color: var(--primary-color); /* Cor do texto semelhante ao design */
+
   padding: 40px 20px;
   text-align: center;
   font-family: 'serif'; /* Ajuste conforme necessário */
