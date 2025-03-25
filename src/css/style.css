@@ -1023,6 +1023,17 @@ h1, p {
   .course-benefits-header {
     padding: 15px; /* Ajusta o padding para telas menores */
   }
+  .course-section-03 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .course-text, .course-benefits {
+    width: 100%;
+    max-width: 90%;
+    padding: 1.5rem;
+  }
 
   container-module {
     max-width: 100%;
@@ -1172,6 +1183,14 @@ h1, p {
 }
 /* Responsividade para telas muito pequenas (smartphones menores) */
 @media (max-width: 480px) {
+
+  .course-text h2, .course-benefits h3 {
+    font-size: 1.6rem;
+  }
+
+  .course-text p, .course-benefits p {
+    font-size: 1rem;
+  }
   .hero-section h1 {
     font-size: 1.5rem;
   }
@@ -1317,6 +1336,19 @@ h1, p {
     font-size: 14px;
     max-width: 100%;
   }
+
+  .course-benefits {
+    padding: 1.5rem;
+  }
+
+  .course-benefits h3 {
+    font-size: 1.8rem;
+  }
+
+  .course-benefits p {
+    font-size: 1rem;
+  }
+
   .footer {
     padding: 30px 15px;
   }
