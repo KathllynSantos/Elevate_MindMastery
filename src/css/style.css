@@ -318,17 +318,20 @@ h1, p {
 }
 .course-section-03 {
   position: relative;
-  background-image: url(/src/img/banner\ 3.jpg); /* Substitua pela URL do seu banner */
+  background-image: url(/src/img/banner3.jpg); /* Verifique o caminho */
   background-size: cover;
-  background-attachment: fixed; /* Parallax effect */
   background-position: center;
+  background-attachment: scroll; /* Alterado para melhor compatibilidade */
   padding: 40px 20px;
   margin-top: 0px;
-  color: #fff; /* Definindo a cor do texto padrão */
-  display: flex; /* Exibe os dois blocos lado a lado */
+  color: #fff;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 300px; /* Garante que a imagem fique visível */
+  width: 100%;
 }
+
 /* Seções de aprendizado e benefícios */
 .course-section {
   position: relative;
