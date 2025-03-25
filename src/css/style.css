@@ -456,6 +456,7 @@ h1, p {
 }
 
 
+
 .module {
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -477,9 +478,9 @@ h1, p {
 .module-title {
   font-size: 20px;
   font-weight: bold;
-  color: var(--secondary-color);
+  color: var(--primary-color);
+  margin-bottom: 15px;
   text-align: left;
-  flex: 1; /* Ocupa todo o espaço disponível */
 }
 
 .parts-count {
